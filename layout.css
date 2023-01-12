@@ -115,7 +115,7 @@ header .fa-bars {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url(image/pppp.jpeg) no-repeat;
+    background: linear-gradient( #ee9ca7, #ffdde1);
     background-size: cover;
     background-position: center;
 }
@@ -152,12 +152,12 @@ header .fa-bars {
     padding-bottom: 3rem;
 }
 
-.about .row .video-container {
+.about .row .img-container {
     flex: 1 1 40rem;
     position: relative;
 }
 
-.about .row .video-container video {
+.about .row .img-container img {
     width: 100%;
     border: 1.5rem solid #fff;
     border-radius: .5rem;
@@ -171,6 +171,18 @@ header .fa-bars {
 .about .row .content h3 {
     font-size: 3rem;
     color: #333;
+}
+
+.about .row .img-container h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
 }
 
 .about .row .content p {
@@ -483,4 +495,29 @@ header .fa-bars {
     .heading {
         font-size: 3rem;
     }
+}
+
+.to-top {
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #1f1f1f;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
 }
